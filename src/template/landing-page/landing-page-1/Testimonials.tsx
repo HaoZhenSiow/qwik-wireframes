@@ -1,6 +1,6 @@
 import { component$,useStylesScoped$ } from '@builder.io/qwik'
 
-import InteriorDesign from './card/InteriorDesign'
+import Review from '~/components/social-proof/card/Review'
 
 export default component$(() => {
   useStylesScoped$(`
@@ -39,19 +39,17 @@ export default component$(() => {
   `)
 
   return (
-    <section class="fluid-section" aria-label="">
-      <h2>Outstanding Work and Nothing Less</h2>
-      {/* <h2 class="text-center">Outstanding Work<br class="gte650:hidden" /> and Nothing Less</h2> */}
-      {/* <h2>Find Out What <br/>We Do Best</h2> */}
+    <section class="fluid-section" aria-label="testimonials">
+      <h2>Don't Take Our Word For It. Hear What Our Customers Say.</h2>
       <div>
-        <InteriorDesign />
-        <InteriorDesign />
-        <InteriorDesign />
-        <InteriorDesign />
-        <InteriorDesign />
-        <InteriorDesign />
+        <Review />
+        <Review />
+        <Review />
+        <Review />
+        <Review />
+        <Review />
       </div>
-      <button type="button">All Projects</button>
+      <button type="button">View More Testimonials</button>
     </section>
   )
 })

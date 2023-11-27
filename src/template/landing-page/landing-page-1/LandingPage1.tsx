@@ -4,7 +4,8 @@ import DoubleMarquee from "~/components/hero/DoubleMarquee"
 import Feature1 from "./feature/Feature1"
 import Feature2 from "./feature/Feature2"
 import LogoMarquee from "~/components/ultil/marquee/LogoMarquee"
-import Display3_6 from "~/components/social-proof/Display3_6"
+import Portfolio from "./Portfolio"
+import Testimonials from "./Testimonials"
 
 export default component$(() => {
   return (
@@ -14,7 +15,8 @@ export default component$(() => {
         <LogoMarquee />
         <Feature1 />
         <Feature2 />
-        <Display3_6 />
+        <Portfolio />
+        <Testimonials />
       </main>
     </>
   )
