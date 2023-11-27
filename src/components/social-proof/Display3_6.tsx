@@ -1,6 +1,6 @@
 import { component$,useStylesScoped$ } from '@builder.io/qwik'
 
-import Project1 from './Project1'
+import InteriorDesign from './card/InteriorDesign'
 
 export default component$(() => {
   useStylesScoped$(`
@@ -44,12 +44,12 @@ export default component$(() => {
       {/* <h2 class="text-center">Outstanding Work<br class="gte650:hidden" /> and Nothing Less</h2> */}
       {/* <h2>Find Out What <br/>We Do Best</h2> */}
       <div>
-        <Project1 />
-        <Project1 />
-        <Project1 />
-        <Project1 />
-        <Project1 />
-        <Project1 />
+        <InteriorDesign />
+        <InteriorDesign />
+        <InteriorDesign />
+        <InteriorDesign />
+        <InteriorDesign />
+        <InteriorDesign />
       </div>
       <button type="button">All Projects</button>
     </section>
