@@ -1,5 +1,7 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
-import Image from '/public/header/header1.jpg?jsx'
+import Image from "../optimization/Image";
+// import Image from '/public/header/header1.jpg?jsx'
+
 
 export default component$(() => {
   useStylesScoped$(`
@@ -33,7 +35,7 @@ export default component$(() => {
   
   return (
     <header class="">
-      <Image alt="members of the team" loading="eager"/>
+      {Image}
       <div class="fluid-header">
         <h1>Visualize Your Dream Space:<br />We're Your Creative Team</h1>
         <p>At FT2, we're your dedicated partners in creating spaces that truly reflect your lifestyle and vision. Our award-winning interior designers are ready to bring your dream living space to life. With FT2, your living space isn't just transformed; it's designed to complement your life seamlessly. We're here to make your vision a reality, ensuring a hassle-free and enjoyable journey.</p>
