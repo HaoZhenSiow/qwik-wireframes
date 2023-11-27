@@ -16,22 +16,22 @@
 //     decoding="async" />)
 const Image = (
 <img
-    srcSet="/header/optimized/header1_200.jpg 200w,
-            /header/optimized/header1_400.jpg 400w,
-            /header/optimized/header1_600.jpg 600w,
-            /header/optimized/header1_800.jpg 800w,
-            /header/optimized/header1_1000.jpg 1000w,
-            /header/optimized/header1_1200.jpg 1200w,
-            /header/optimized/header1_1400.jpg 1400w,
-            /header/optimized/header1_1600.jpg 1600w,
-            /header/optimized/header1_1800.jpg 1800w,
-            /header/optimized/header1_2000.jpg 2000w,
-            /header/optimized/header1_2200.jpg 2200w,
-            /header/optimized/header1_2400.jpg 2400w,
-            /header/optimized/header1_2600.jpg 2600w,
-            /header/optimized/header1_2800.jpg 2800w,
-            /header/optimized/header1_3000.jpg 3000w,
-            /header/optimized/header1_3200.jpg 3200w"
+    srcSet="/header/header1/header1_200.webp 200w,
+            /header/header1/header1_400.webp 400w,
+            /header/header1/header1_600.webp 600w,
+            /header/header1/header1_800.webp 800w,
+            /header/header1/header1_1000.webp 1000w,
+            /header/header1/header1_1200.webp 1200w,
+            /header/header1/header1_1400.webp 1400w,
+            /header/header1/header1_1600.webp 1600w,
+            /header/header1/header1_1800.webp 1800w,
+            /header/header1/header1_2000.webp 2000w,
+            /header/header1/header1_2200.webp 2200w,
+            /header/header1/header1_2400.webp 2400w,
+            /header/header1/header1_2600.webp 2600w,
+            /header/header1/header1_2800.webp 2800w,
+            /header/header1/header1_3000.webp 3000w,
+            /header/header1/header1_3200.webp 3200w"
     sizes="(max-width: 414px) 382.25px,
            (max-width: 768px) 664.175px,
            1199.97px"
