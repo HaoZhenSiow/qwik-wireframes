@@ -1,14 +1,12 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 
-import DoubleMarquee from "~/components/hero/DoubleMarquee";
+import LandingPage1 from "~/template/landing-page/landing-page-1/LandingPage1";
 
 export default component$(() => {
   return (
     <>
-      <DoubleMarquee />
-      
-
+      <LandingPage1 />
     </>
   );
 });
