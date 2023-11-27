@@ -1,5 +1,5 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
-import Image from "../optimization/Image";
+import Image from "../ultil/optimization/Image";
 // import Image from '/public/header/header1.jpg?jsx'
 
 
