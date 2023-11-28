@@ -8,6 +8,7 @@ import Portfolio from "./Portfolio"
 import Testimonials from "./Testimonials"
 import Faq1 from "~/components/faq/faq1/Faq1"
 import TextOnlyForm from "~/components/form/TextOnlyForm"
+import FoundersNote1 from "~/components/founders-note/FoundersNote1"
 
 export default component$(() => {
   return (
@@ -21,6 +22,7 @@ export default component$(() => {
         <Testimonials />
         <Faq1 />
         <TextOnlyForm />
+        <FoundersNote1 />
       </main>
     </>
   )
