@@ -7,6 +7,7 @@ import LogoMarquee from "~/components/ultil/marquee/LogoMarquee"
 import Portfolio from "./Portfolio"
 import Testimonials from "./Testimonials"
 import Faq1 from "~/components/faq/faq1/Faq1"
+import TextOnlyForm from "~/components/form/TextOnlyForm"
 
 export default component$(() => {
   return (
@@ -19,6 +20,7 @@ export default component$(() => {
         <Portfolio />
         <Testimonials />
         <Faq1 />
+        <TextOnlyForm />
       </main>
     </>
   )
