@@ -55,17 +55,13 @@ export default component$(() => {
 
   return (
     <section class={`fluid-section ${isVisualLeft ? 'left' : ''}`}>
-      <div>
-        <h2>Crack the Code to<br /> Transparent Renovation Pricing</h2>
-        <p>Hidden costs and unexpected expenses can turn your dream home project into a financial nightmare. But worry not! We&apos;ve introduced E Build Assist, a revolutionary quotation system that provides you:</p>
-        <ul>
-          <li>Accurate Quotation in Just 1 Hour</li>
-          <li>Drag-and-Drop Features which you can Easily Customize Your Quotation</li>
-          <li>Access the User-Friendly Platform within 3 days from Your First Consultation</li>
-          <li>Transparent Cost Breakdown</li>
-          <li>Effortless Comparison with Other Agencies&apos; Quotation</li>
-          <li>Comprehensive Insight into Your Home Transformation Process</li>
-        </ul>
+      <div class="copy">
+        <h2>A Wonderful Renovation isn&apos;t Just About the Design; It&apos;s About the Whole Renovation Experience</h2>
+        <p>With over 20 years of combined experience, we&apos;ve seen it all, and we've helped [X] homeowners bring their dream homes to life. Since each household is unique, what we bring to each project needs to reflect that.</p>
+        <p>It isn&apos;t enough just to deliver your dream home — we want you to have a smooth and stress-free renovation experience.</p>
+        <p>I bet you've heard about stories of renovation nightmare — the frustrations of delays, questionable work, and unexpected costs. We don&apos;t want you to be the next victim.</p>
+        <p>Your Peace of Mind is Our Priority: Direct communication, a dedicated project manager, and regular updates—putting you in control, every step of the way.</p>
+        <p>We've got your back, unwaveringly upholding our core values, and providing our clients with an unparalleled renovation experience that's unlike any other in Singapore.</p>
       </div>
       <div class="visual"></div>
     </section>
