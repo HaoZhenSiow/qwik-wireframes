@@ -6,6 +6,7 @@ import Feature2 from "./feature/Feature2"
 import LogoMarquee from "~/components/ultil/marquee/LogoMarquee"
 import Portfolio from "./Portfolio"
 import Testimonials from "./Testimonials"
+import Faq1 from "~/components/faq/faq1/Faq1"
 
 export default component$(() => {
   return (
@@ -17,6 +18,7 @@ export default component$(() => {
         <Feature2 />
         <Portfolio />
         <Testimonials />
+        <Faq1 />
       </main>
     </>
   )
