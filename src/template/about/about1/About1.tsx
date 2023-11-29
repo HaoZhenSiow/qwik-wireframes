@@ -4,6 +4,7 @@ import Header from "~/components/header/About1"
 import OurStory from "./components/OurStory"
 import Award1 from "~/components/award/Award1"
 import CoreValues1 from "~/components/core-values/CoreValues1"
+import Timeline1 from "~/components/timeline/Timeline1"
 
 export default component$(() => {
   return (
@@ -13,6 +14,7 @@ export default component$(() => {
         <OurStory />
         <Award1 />
         <CoreValues1 />
+        <Timeline1 />
       </main>
     </>
   )
