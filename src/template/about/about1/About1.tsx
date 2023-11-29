@@ -7,6 +7,7 @@ import CoreValues1 from "~/components/core-values/CoreValues1"
 import Timeline1 from "~/components/timeline/Timeline1"
 import TextOnlyForm from "~/components/form/TextOnlyForm"
 import Gallery1 from "~/components/gallery/Gallery1"
+import Team1 from "~/components/team/Team1"
 
 export default component$(() => {
   return (
@@ -17,6 +18,7 @@ export default component$(() => {
         <Award1 />
         <CoreValues1 />
         <Timeline1 />
+        <Team1 />
         <TextOnlyForm />
         <Gallery1 />
       </main>

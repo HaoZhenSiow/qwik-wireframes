@@ -3,9 +3,14 @@ import optImg from "../ultil/optimization/Image";
 
 export default component$(() => {
   useStylesScoped$(`
+    section {
+      text-align: center;
+    }
+
+    h2, p { text-align: left; }
+
     h3 {
       margin-top: 2em;
-      text-align: center;
     }
 
     .gallery {
@@ -23,6 +28,16 @@ export default component$(() => {
       height: 100%;
       aspect-ratio: 1 / 1;
       object-fit: cover;
+    }
+
+    button {
+      font-weight: bold;
+      padding: 1em 2em;
+      margin-top: 2em;
+      background-color: black;
+      color: white;
+      border-radius: 5px;
+      margin-inline: auto;
     }
   `)
   return (
@@ -46,6 +61,7 @@ export default component$(() => {
           optImg(`/GFA/${idx+1}`, 1000, 667, ['183.075px', '323.725px', '388.025px'], 'test')
         ))}
       </div>
+      <button type="button">Join Us!</button>
     </section>
   )
 })
