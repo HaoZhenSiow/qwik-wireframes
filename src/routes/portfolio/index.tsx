@@ -1,18 +1,12 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 
-import LandingPage1 from "~/template/landing-page/landing-page-1/LandingPage1";
+import PortfolioTemplate1 from "~/template/portfolio/PortfolioTemplate1";
 
 export default component$(() => {
   return (
     <>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <h1>This is a Portfolio Page</h1>
-      <LandingPage1 />
+      <PortfolioTemplate1 />
     </>
   );
 });
