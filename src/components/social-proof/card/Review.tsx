@@ -1,4 +1,6 @@
-import { component$, useStylesScoped$ } from '@builder.io/qwik'
+import { component$, useSignal, useStylesScoped$, useVisibleTask$ } from '@builder.io/qwik'
+import { Slot } from '@builder.io/qwik'
+import useDialog from '~/hooks/useDialog'
 
 export default component$(() => {
   useStylesScoped$(`
@@ -36,18 +38,59 @@ export default component$(() => {
       align-items: flex-start;
       padding: 2em 1.5em;
       letter-spacing: -0.07em;
+
+      > div {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        height: auto;
+        -webkit-line-clamp: 5;
+      }
+
+      > div > p {
+        margin-block: 1em;
+      }
+
+      > b {
+        font-size: 1.3em; 
+        line-height: 1.2;
+      }
+
+      &.expanded > div {
+        -webkit-line-clamp: 100;
+      }
     }
 
-    b { margin-bottom: .5em; }
+    button {
+      margin-top: .5em;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      font-weight: 700;
+    }
+
+    dialog {
+      max-width: 40.125em;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 3em 2em;
+    }
   `)
+
+  const { dialogRef, isShown, showDialog } = useDialog()
 
   return (
     <div class="review">
       <div class="visual"></div>
       <div class="copy">
-        <b>"Professionalism, Punctuality, Responsiveness"</b>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <Slot />
+        <button type="button" onClick$={() => showDialog()}>continue reading...</button>
       </div>
+      {isShown && <dialog ref={dialogRef}>
+        <p>I am delighted to share my experience working with our talented interior designer, Moon, during the renovation of our apartment. Her exceptional skills and creative vision have truly left us in awe. She provide us with a beautifully designed space, but they also managed the project efficiently, keeping everything on track and within our budget. Her clear communication and problem-solving skills made the entire process stress-free and enjoyable. I wholeheartedly recommend our interior designer to my friends who seeking to enhance their living space with a touch of creativity and professionalism.</p>
+      </dialog>}
     </div>
   )
 })
