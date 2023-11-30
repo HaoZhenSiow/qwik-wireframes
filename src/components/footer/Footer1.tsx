@@ -64,7 +64,11 @@ export default component$(() => {
       flex-grow: 1;
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: space-between;
+
+      @media (width >= 650px) {
+        justify-content: space-around;
+      }
     }
 
     .social-media {

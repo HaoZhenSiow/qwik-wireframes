@@ -1,4 +1,5 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik"
+import { Link } from '@builder.io/qwik-city';
 
 const navitems = ['About', 'Services', 'Portfolio', 'Testimonials', 'Contact']
 
@@ -38,7 +39,7 @@ export default component$(() => {
       <ul>
         {navitems.map((item) => (
           <li key={item}>
-            <a href={`/${item}`}>{item}</a>
+            <Link href={`/${item.toLowerCase()}`} prefetch>{item}</Link>
           </li>
         ))}
         <li>

@@ -1,5 +1,5 @@
-import { component$, useStylesScoped$ } from "@builder.io/qwik";
-import optImg from "../ultil/optimization/Image";
+import { component$, useStylesScoped$ } from "@builder.io/qwik"
+import Img from "../ultil/optimization/Img"
 
 export default component$(() => {
   useStylesScoped$(`
@@ -45,21 +45,72 @@ export default component$(() => {
       <h2>Life @ Swiss</h2>
       <p>At Swiss Interior, we believe in the constant upgrading of skills and design. We partner with other leading brands within and beyond the interior design industry to keep our interior designers in trend and updated with the latest designs, products and styles</p>
       <div class="gallery">
-        {Array(12).fill('x').map((x, idx) => (
-          optImg(`/trip/${idx+1}`, 1000, 667, ['183.075px', '323.725px', '388.025px'], 'test')
-        ))}
+        <Img src="/trip/1" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="company trip" />
+        <Img src="/trip/2" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="company trip" />
+        <Img src="/trip/3" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="company trip" />
+        <Img src="/trip/4" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="company trip" />
+        <Img src="/trip/5" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="company trip" />
+        <Img src="/trip/6" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="company trip" />
+        <Img src="/trip/7" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="company trip" />
+        <Img src="/trip/8" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="company trip" />
+        <Img src="/trip/9" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="company trip" />
+        <Img src="/trip/10" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="company trip" />
+        <Img src="/trip/11" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="company trip" />
+        <Img src="/trip/12" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="company trip" />
       </div>
       <h3>D & D 2023</h3>
       <div class="gallery">
-        {Array(24).fill('x').map((x, idx) => (
-          optImg(`/D&D/${idx+1}`, 1000, 667, ['183.075px', '323.725px', '388.025px'], 'test')
-        ))}
+        <Img src="/D&D/1" sizes={['183.075px', '323.725px', '388.025px']} width={400} height={400} alt="D&D training" />
+        <Img src="/D&D/2" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="D&D training" />
+        <Img src="/D&D/3" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="D&D training" />
+        <Img src="/D&D/4" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="D&D training" />
+        <Img src="/D&D/5" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="D&D training" />
+        <Img src="/D&D/6" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="D&D training" />
+        <Img src="/D&D/7" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="D&D training" />
+        <Img src="/D&D/8" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="D&D training" />
+        <Img src="/D&D/9" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="D&D training" />
+        <Img src="/D&D/10" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="D&D training" />
+        <Img src="/D&D/11" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="D&D training" />
+        <Img src="/D&D/12" sizes={['183.075px', '323.725px', '388.025px']} width={400} height={400} alt="D&D training" />
+        <Img src="/D&D/13" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="D&D training" />
+        <Img src="/D&D/14" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="D&D training" />
+        <Img src="/D&D/15" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="D&D training" />
+        <Img src="/D&D/16" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="D&D training" />
+        <Img src="/D&D/17" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="D&D training" />
+        <Img src="/D&D/18" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="D&D training" />
+        <Img src="/D&D/19" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="D&D training" />
+        <Img src="/D&D/20" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="D&D training" />
+        <Img src="/D&D/21" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="D&D training" />
+        <Img src="/D&D/22" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="D&D training" />
+        <Img src="/D&D/23" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="D&D training" />
+        <Img src="/D&D/24" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="D&D training" />
       </div>
       <h3>GFA Training</h3>
       <div class="gallery">
-        {Array(24).fill('x').map((x, idx) => (
-          optImg(`/GFA/${idx+1}`, 1000, 667, ['183.075px', '323.725px', '388.025px'], 'test')
-        ))}
+        <Img src="/GFA/1" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
+        <Img src="/GFA/2" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
+        <Img src="/GFA/3" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
+        <Img src="/GFA/4" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
+        <Img src="/GFA/5" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
+        <Img src="/GFA/6" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
+        <Img src="/GFA/7" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
+        <Img src="/GFA/8" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
+        <Img src="/GFA/9" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
+        <Img src="/GFA/10" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
+        <Img src="/GFA/11" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
+        <Img src="/GFA/12" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
+        <Img src="/GFA/13" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
+        <Img src="/GFA/14" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
+        <Img src="/GFA/15" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
+        <Img src="/GFA/16" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
+        <Img src="/GFA/17" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
+        <Img src="/GFA/18" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
+        <Img src="/GFA/19" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
+        <Img src="/GFA/20" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
+        <Img src="/GFA/21" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
+        <Img src="/GFA/22" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
+        <Img src="/GFA/23" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
+        <Img src="/GFA/24" sizes={['183.075px', '323.725px', '388.025px']} width={1000} height={1000} alt="GFA training" />
       </div>
       <button type="button">Join Us!</button>
     </section>

@@ -1,8 +1,10 @@
 import { component$, useStylesScoped$ } from '@builder.io/qwik'
+import { Link } from '@builder.io/qwik-city'
 import useWindowScroll from '~/hooks/useWindowScroll'
 
 import Nav1 from './nav/Nav1'
 import Hamburger1 from './hamburger/Hamburger1'
+
 
 export default component$(() => {
   useStylesScoped$(createStyle())
@@ -12,7 +14,9 @@ export default component$(() => {
   return (
     <div class={["navbar", scroll.value > 0 && "scrolled"]}>
       <div class="fluid-container">
-        <p class="navbar__logo">LOGO</p>
+        <Link href="/" prefetch>
+          <p class="navbar__logo">LOGO</p>
+        </Link>
         <Nav1 />
         <Hamburger1 />
       </div>

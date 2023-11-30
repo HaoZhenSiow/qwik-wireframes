@@ -4,19 +4,17 @@ import fluid from "~/lib/fluid";
 export default component$(() => {
   useStylesScoped$(`
     section {
-      padding-top: ${fluid(100, 150, 350, 1440)};
+      padding-top: ${fluid(150, 200, 350, 1440)};
     }
 
     .contact {
       display: flex;
       flex-direction: column-reverse;
       gap: 1em;
-      margin-top: 1em;
 
       @media (width >= 1000px) {
         flex-direction: row;
         gap: 3em;
-        margin-top: 2em;
       }
     }
 

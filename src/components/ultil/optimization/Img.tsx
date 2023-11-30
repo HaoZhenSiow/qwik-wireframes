@@ -1,11 +1,11 @@
-export default function optImg(
+export default function Img({ src, width, height, sizes, alt, eager }: {
     src: string,
     width: number,
     height: number,
     sizes: [string, string, string],
     alt: string,
     eager?: boolean
-) {
+}) {
     const sizesStr = `(max-width:414px)${sizes[0]},(max-width:768px)${sizes[1]},${sizes[2]}`
     let srcStr = ''
     for (let x = 200; x <= width; x += 200) {
