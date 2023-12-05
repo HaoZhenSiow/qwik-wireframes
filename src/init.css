@@ -164,3 +164,15 @@ button {
 button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover {
   cursor: pointer;
 }
+
+html:has(:modal) {
+  overflow: hidden;
+
+  @media (width >= 1000px) {
+    padding-inline-end: 16px;
+  }
+}
+
+html:has(:modal) nav {
+  margin-inline-end: 16px;
+}

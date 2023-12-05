@@ -26,6 +26,11 @@ export default component$(() => {
       padding: .5em 1em;
       border-radius: 5px;
     }
+    
+    body > div > div > nav > ul > li {
+      
+      color: red;
+    }
 
     @media (width <= 950px) {
       nav {
@@ -35,7 +40,7 @@ export default component$(() => {
   `)
   
   return (
-    <nav>
+    <nav class="navigation">
       <ul>
         {navitems.map((item) => (
           <li key={item}>

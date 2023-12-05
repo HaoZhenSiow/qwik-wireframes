@@ -1,8 +1,8 @@
-import { component$, useSignal, useStylesScoped$, useVisibleTask$ } from '@builder.io/qwik'
-import { Slot } from '@builder.io/qwik'
+import { component$, useStylesScoped$ } from '@builder.io/qwik'
 import useDialog from '~/hooks/useDialog'
 
-export default component$(() => {
+export default component$(({ title, copy }: 
+{ title: string; copy: string[]}) => {
   useStylesScoped$(`
     .review {
       overflow: hidden;
@@ -44,21 +44,17 @@ export default component$(() => {
         -webkit-box-orient: vertical;
         overflow: hidden;
         height: auto;
-        -webkit-line-clamp: 5;
+        -webkit-line-clamp: 3;
       }
+    }
 
-      > div > p {
-        margin-block: 1em;
-      }
+    b {
+      font-size: 1.3em; 
+      line-height: 1.2;
+    }
 
-      > b {
-        font-size: 1.3em; 
-        line-height: 1.2;
-      }
-
-      &.expanded > div {
-        -webkit-line-clamp: 100;
-      }
+    p {
+      margin-block: 1em;
     }
 
     button {
@@ -76,6 +72,10 @@ export default component$(() => {
       left: 50%;
       transform: translate(-50%, -50%);
       padding: 3em 2em;
+
+      > p {
+        color: red;
+      }
     }
   `)
 
@@ -85,11 +85,21 @@ export default component$(() => {
     <div class="review">
       <div class="visual"></div>
       <div class="copy">
-        <Slot />
+        <b>{title}</b>
+        <div>
+          {copy.map((p, idx) => (
+            <p key={idx}>{p}</p>
+          ))}
+        </div>
         <button type="button" onClick$={() => showDialog()}>continue reading...</button>
       </div>
       {isShown && <dialog ref={dialogRef}>
-        <p>I am delighted to share my experience working with our talented interior designer, Moon, during the renovation of our apartment. Her exceptional skills and creative vision have truly left us in awe. She provide us with a beautifully designed space, but they also managed the project efficiently, keeping everything on track and within our budget. Her clear communication and problem-solving skills made the entire process stress-free and enjoyable. I wholeheartedly recommend our interior designer to my friends who seeking to enhance their living space with a touch of creativity and professionalism.</p>
+        <div>
+          <b>{title}</b>
+          {copy.map((p, idx) => (
+            <p key={idx}>{p}</p>
+          ))}
+        </div>
       </dialog>}
     </div>
   )

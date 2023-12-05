@@ -1,5 +1,6 @@
 import { component$,useStylesScoped$ } from '@builder.io/qwik'
 
+import reviews from '~/template/testimonials/testimonial1/reviews'
 import Review from '~/components/social-proof/card/Review'
 
 export default component$(() => {
@@ -41,15 +42,11 @@ export default component$(() => {
   return (
     <section class="fluid-section" aria-label="testimonials">
       <h2>Don't Take Our Word For It. Hear What Our Customers Say.</h2>
-      <div>
-        <Review />
-        <Review />
-        <Review />
-        <Review />
-        <Review />
-        <Review />
+      <div class="reviews">
+        {reviews.map((review, idx) => (
+          <Review key={idx} title={review.title} copy={review.copy}/>
+        ))}
       </div>
-      <button type="button">View More Testimonials</button>
     </section>
   )
 })
