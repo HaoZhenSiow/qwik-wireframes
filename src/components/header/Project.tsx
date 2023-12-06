@@ -1,70 +1,45 @@
-import { component$, useStylesScoped$ } from '@builder.io/qwik'
+import { component$, useStylesScoped$ } from "@builder.io/qwik";
+import fluid from "~/lib/fluid";
 
 export default component$(() => {
   useStylesScoped$(`
-    .project {
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 3px 13px 21px -3px rgba(161,161,161,0.4);
-      cursor: pointer;
-
-      &:nth-child(4), &:nth-child(5), &:nth-child(6) {
-        display: none;
-      }
-
-      @media (width > 650px) {
-        &:nth-child(4) {
-          display: block;
-        }
-      }
-
-      @media (width > 1200px) {
-        &:nth-child(4), &:nth-child(5), &:nth-child(6) {
-          display: block;
-        }
-      }
-    }
-
-    .visual {
-      position: relative;
-      aspect-ratio: 3/2;
-      background-color: #525252;
-    }
-
-    .type, .price {
-      position: absolute;
-      bottom: 1em;
-      left: 2em;
-      color: white;
-    }
-
-    .price {
-      right: 2em;
-      left: auto;
-    }
-
-    .details {
+    header {
+      margin-top: ${fluid(150, 200, 350, 1440)};
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      padding: 2em 1.5em;
+      
+      
+      @media (width >= 1000px) {
+        flex-direction: row;
+      }
+
     }
 
-    h3 {
-      letter-spacing: -0.05em;
-      margin-bottom: .2em;
+    h1 {
+      font-size: calc(var(--fluid-lg) * 1.2);
+      margin-bottom: .5em;
+
+      @media (width >= 1000px) {
+        margin-bottom: .25em;
+        margin-right: 1em;
+      }
     }
 
-    .address {
-      letter-spacing: -0.05em;
-      line-height: 1.25em;
+    .project-desc {
+      max-width: 38.125em;
+    }
+
+    p {
       margin-bottom: 1em;
+    }
+
+    .project-detail > *:not(h1) {
+      margin-bottom: .5em;
     }
 
     .specs {
       display: flex;
-      flex-wrap: wrap;
-      gap: .5em;
+      gap: 2em;
     }
 
     .specs p {
@@ -76,16 +51,14 @@ export default component$(() => {
       margin-right: .2em;
     }
   `)
-
   return (
-    <div class={`project`}>
-      <div class="visual">
-        <b class="type">CONDO</b>
-        <b class="price">S$49,000</b>
-      </div>
-      <div class="details">
-        <h3>513 The Calrose</h3>
-        <p class="address">513 Tio Chu Kang Road, Singapore 787066</p>
+    <header class="fluid-header">
+      <div class="project-detail">
+        <h1>513 The Calrose</h1>
+        <p>513 Tio Chu Kang Road, Singapore 787066</p>
+        <p>Project Cost: S$49,000</p>
+        <p>Property Type: Condo</p>
+        <p>Style: Scandinavian</p>
         <div class="specs">
           <p>
             <svg height="1em" width="1em" viewBox="0 0 512 512" stroke="currentColor" class="bedIcon">
@@ -106,9 +79,13 @@ export default component$(() => {
             </svg>
             1300 sqft
           </p>
-          <p>Scandinavian</p>
         </div>
       </div>
-    </div>
+      <div class="project-desc">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla praesentium explicabo quaerat repellendus placeat illo, quo, similique quas obcaecati sunt earum dignissimos magnam unde nihil, officia ex tenetur nemo repellat?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, impedit praesentium quia quae magnam natus earum odit necessitatibus deserunt minus commodi quidem in totam iusto inventore distinctio error voluptates? Fugiat.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ut aliquid accusamus, sit natus nostrum perferendis, consequatur earum dolores ipsa sint, inventore porro? Eum, temporibus cupiditate alias facilis illo magnam!</p>
+      </div>
+    </header>
   )
 })
