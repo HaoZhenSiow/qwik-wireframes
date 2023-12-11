@@ -75,6 +75,7 @@ export default component$(() => {
         </select>
       </div>
       <div class="project">
+        {/* <InteriorDesign />
         <InteriorDesign />
         <InteriorDesign />
         <InteriorDesign />
@@ -85,8 +86,7 @@ export default component$(() => {
         <InteriorDesign />
         <InteriorDesign />
         <InteriorDesign />
-        <InteriorDesign />
-        <InteriorDesign />
+        <InteriorDesign /> */}
       </div>
     </section>
   )
