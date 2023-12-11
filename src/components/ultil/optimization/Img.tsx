@@ -1,10 +1,13 @@
-export default function Img({ src, width, height, sizes, alt, eager }: {
+import { type QRL } from "@builder.io/qwik"
+
+export default function Img({ src, width, height, sizes, alt, eager, onClick }: {
     src: string,
     width: number,
     height: number,
     sizes: [string, string, string],
     alt: string,
-    eager?: boolean
+    eager?: boolean,
+    onClick?: QRL<() => void>
 }) {
     const sizesStr = `(max-width:414px)${sizes[0]},(max-width:768px)${sizes[1]},${sizes[2]}`
     let srcStr = ''
@@ -21,6 +24,7 @@ export default function Img({ src, width, height, sizes, alt, eager }: {
             width={width}
             height={height}
             loading={eager ? "eager" : "lazy"}
-            decoding="async" />
+            decoding="async"
+            onClick$={onClick} />
     )
 }
